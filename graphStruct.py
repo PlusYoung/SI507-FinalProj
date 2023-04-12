@@ -17,7 +17,7 @@ def similarity(movie1, movie2):
 
 
 def find_similar_movies(movie_data, target_title, top_n=5):
-    print(movie_data)
+    # print(movie_data)
     target_movie = movie_data[target_title]
     similarities = [(title, similarity(target_movie, movie)) for title, movie in movie_data.items() if
                     title != target_title]
