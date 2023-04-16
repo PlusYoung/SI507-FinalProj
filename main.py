@@ -60,7 +60,13 @@ def main():
                     break
                 else:
                     chose = input("Your input is invalid! Please Enter again: ")
-            movie_data, path = fetch_movies_more(years, genre_ids=genre_ids, flag=int(chose))
+            while True:
+                movie_data, path = fetch_movies_more(years, genre_ids=genre_ids, flag=int(chose))
+                if movie_data == 0:
+                    genre_ids = start_input(constant.genre_id_to_name)
+                    years = start_input(constant.year_can_be_get)
+                else:
+                    break
             break
         else:
             flag = input("Your input is invalid! Please Enter again: ")

@@ -78,7 +78,7 @@ def fetch_movies_more(years, genre_ids=None, flag=1):
             #     movies = fetch_movies(year=year, genre_ids=genre_ids)
             # except:
             #     print('The condition you gave is too strict. Please use less genre and more years to pick movies.')
-            #     return None
+            #     return 0, None
     if flag == 2:
         for year in years:
             print(f"Fetching movies from {year}...")
@@ -89,7 +89,10 @@ def fetch_movies_more(years, genre_ids=None, flag=1):
                 #     movies = fetch_movies(year=year, genre_ids=genre_ids)
                 # except:
                 #     print('The condition you gave is too strict. Please use less genre and more years to pick movies.')
-                #     return None
+                #     return 0, None
+    if len(movies) == 0:
+        print('The condition you gave is too strict. Please use less genre and more years to pick movies.')
+        return 0, None
     path = self_input(
         "The relevant data will be automatically fetched and saved to a JSON file for further processing. The "
         "default file name is 'movie_data.json'. Do you want to change the file name? If you wish to change it, "
