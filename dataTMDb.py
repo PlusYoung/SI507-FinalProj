@@ -39,6 +39,7 @@ def fetch_movies(page=1, year=None, genre_ids=None, sort_by='popularity.desc'):
         params['with_genres'] = ','.join(str(id) for id in genre_ids)
 
     response = requests.get(base_url, params=params)
+    # print(response.json())
     movie_results = response.json()['results']
     movie_data = []
     for movie in movie_results:
@@ -90,7 +91,9 @@ def fetch_movies_more(years, genre_ids=None, flag=1):
                 # except:
                 #     print('The condition you gave is too strict. Please use less genre and more years to pick movies.')
                 #     return 0, None
-    if len(movies) == 0:
+    # the recommended movies need more than 6, which is good to make Graph
+    # (we will need to give top 5 similar movies later)
+    if len(movies) <= 6:
         print('The condition you gave is too strict. Please use less genre and more years to pick movies.')
         return 0, None
     path = self_input(
