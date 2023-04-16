@@ -14,14 +14,7 @@ This project is a movie recommendation system based on the TMDb and Reddit APIs.
 * anytree
 
 **APIS：**
-* TMDb API
-    * API_KEY = 'aa81dde10be1a5e7a104fb616de2beca'
-    * tip: We can change ‘params’ to get attributes we want
-* Reddit API
-    * REDDIT_CLIENT_ID = 'OoVKZzqmvk2-dll_XiIjIQ'
-    * REDDIT_SECRET = 'PSRIKy3ciYIv_kC1X5JXboN43nBv1A'
-    * REDDIT_USER_AGENT = 'reddit:MovieRecommender:v1.0 (by /u/dsdjsdoi)'  
-    * tip: The data was accessed using PRAW, a Python wrapper for the Reddit API. Reddit was used to fetch movie reviews from the subreddit 'movies'.
+
 
 ## Running the Program
 * Step 1: Execute the main script or command.
