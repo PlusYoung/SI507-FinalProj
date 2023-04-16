@@ -5,10 +5,11 @@
 # @File    : dataReddit.py
 
 import praw
+import config
 
-REDDIT_CLIENT_ID = 'OoVKZzqmvk2-dll_XiIjIQ'
-REDDIT_SECRET = 'PSRIKy3ciYIv_kC1X5JXboN43nBv1A'
-REDDIT_USER_AGENT = 'reddit:MovieRecommender:v1.0 (by /u/dsdjsdoi)'
+REDDIT_CLIENT_ID = config.REDDIT_CLIENT_ID
+REDDIT_SECRET = config.REDDIT_SECRET
+REDDIT_USER_AGENT = config.REDDIT_USER_AGENT
 
 reddit = praw.Reddit(
     client_id=REDDIT_CLIENT_ID,

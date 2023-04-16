@@ -7,15 +7,16 @@ import requests
 import constant
 from cacheFunction import cache_data_to_json
 from checkInput import self_input
+import config
 
-API_KEY = 'aa81dde10be1a5e7a104fb616de2beca'
+TMDb_API_KEY = config.TMDb_API_KEY
 
 
 # get information about actors and directors
 def fetch_movie_details(movie_id):
     base_url = f'https://api.themoviedb.org/3/movie/{movie_id}'
     params = {
-        'api_key': API_KEY,
+        'api_key': TMDb_API_KEY,
         'append_to_response': 'credits',
     }
     response = requests.get(base_url, params=params)
@@ -26,7 +27,7 @@ def fetch_movie_details(movie_id):
 def fetch_movies(page=1, year=None, genre_ids=None, sort_by='popularity.desc'):
     base_url = 'https://api.themoviedb.org/3/discover/movie'
     params = {
-        'api_key': API_KEY,
+        'api_key': TMDb_API_KEY,
         'page': page,
         'sort_by': sort_by,
     }
