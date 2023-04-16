@@ -34,7 +34,7 @@ This project is a movie recommendation system based on the TMDb and Reddit APIs.
    * Accept the terms of use: Review and accept the TMDb API terms of use.
    * Receive your API key: Once your application is submitted, you will receive your API key. It will also be available in your account's API settings.
 
-**To obtain an API key from Reddit (also called a Client ID and Client Secret), follow these steps:**
+**To obtain an API key from Reddit (a Client ID, Client Secret and User-Agent string), follow these steps:**
    * Create an account or sign in: Visit the Reddit website (https://www.reddit.com/) and either sign up for a new account or sign in to your existing account.
    * Go to the App Preferences page: Once you are signed in, go to the "App Preferences" page by clicking on your username in the top right corner and selecting "User Settings" from the dropdown menu. Then, navigate to the "Privacy & Security" tab and scroll down to the "App Authorization" section. Click on the "Developed Applications" tab and then click on the "Create App" or "Create Another App" button.
    * Fill out the application form: Provide the necessary information, such as the application's name, description, and redirect URI. Choose the "script" option for the "App type" field. The redirect URI can be set to "http://localhost:8080" if you are using the API for local development.
