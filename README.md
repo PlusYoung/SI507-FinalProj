@@ -1,5 +1,5 @@
 # Personalized Movie Recommendation System using TMDb and Reddit APIs
-This project is a movie recommendation system based on the TMDb and Reddit APIs. It can retrieve specific data based on a valid database provided by the user or according to user preferences using the APIs, and present the information in various forms (including: movie details display, recommended movie ratings distribution chart, similar movie recommendations chart, and movie discussion board display）
+This project is a movie recommendation system based on the TMDb and Reddit APIs in Pythjon. It can retrieve specific data based on a valid database provided by the user or according to user preferences using the APIs, and present the information in various forms (including: movie details tree display, recommended movie ratings distribution pie charts, similar movie recommendations graphes, and movie discussion board display）
 ## Prerequisites
 **Libaries:**
 * shutil
@@ -42,6 +42,23 @@ This project is a movie recommendation system based on the TMDb and Reddit APIs.
    * Get your Client ID and Client Secret: After successfully creating the application, you will be provided with a "Client ID" and "Client Secret". The Client ID can be found under the application's name in the "Developed Applications" section, and the Client Secret is listed as "secret" in the application's details.
    * Finally create a User-Agent string for 'REDDIT_USER_AGENT': The User-Agent string is a custom text that helps identify your application to the Reddit API. It should follow the format <platform>:<app ID>:<version string> (by /u/<your Reddit username>). For example: python:my-reddit-app:v1.0 (by /u/exampleUser).
 
+## Data Structure
+### Tree
+ In this project, we utilize a tree data structure to display the detailed information of a movie. The tree is constructed based on a revised JSON file. By calling the `anytree` library, we can directly display the tree structure of the JSON file.
+
+The tree implementation in this project includes the following features:
+
+- Displaying movie details hierarchically
+- Visualizing the JSON file as a tree structure
+
+### Graph
+  In this project, association graphs are used to show the top five most similar movies by calling the `networkx`. This similarity is calculated based on shared genres, directors, and the number of actors.
+
+The graphs implementation in this project includes the following features: 
+ 
+- Use graph to show the top five most similar movies. 
+- The similarity is calculated based on shared genres, directors, and the number of actors. By visualizing the similarities, users can easily identify movies with similar characteristics.
+ 
 ## Running the Program
 * Step 1: Execute the main script or command.
 * Step 2: Follow the prompts or input commands as needed.
